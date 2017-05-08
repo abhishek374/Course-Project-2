@@ -19,6 +19,6 @@ yearbytotal <- aggregate(Emissions ~ year, shortcodes,FUN = "sum")
 
 #Plot the Total Emissions by Year
 png("plot4.png",width = 480, height = 480)
-g <- ggplot(yearbytotal,aes(year,Emissions,color = type))
+g <- ggplot(yearbytotal,aes(year,Emissions))
 g +  geom_bar(stat  = "identity") + xlab( "year") + ylab ( "Total Emissions") + ggtitle("Total Emissions from coal sources")
 dev.off()
